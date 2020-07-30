@@ -31,11 +31,6 @@ jobs:
           go get -u golang.org/x/lint/golint
           pip install pylint
 
-      - name: Changed files
-        run: |
-          echo 'Running tests after a change.'
-          od -c "$HOME/files_modified.json"
-
       - name: Tests OK
         uses: unsplash/comment-on-pr@master
         env:
