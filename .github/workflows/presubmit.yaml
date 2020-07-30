@@ -22,6 +22,7 @@ jobs:
       - name: Compute file changes
         run: |
           echo ${{ github.sha }}
+          git status --oneline --all
           git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
           git diff-tree --diff-filter=AM --no-commit-id --name-only -r ${{ github.sha }}
 
