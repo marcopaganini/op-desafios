@@ -20,11 +20,10 @@ jobs:
           persist-credentials: false
 
       - name: Compute file changes
-        uses: trilom/file-changes-action@v1.2.0
-        with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          output: 'json'
-          fileOutput: 'json'
+        run: |
+          echo ${{ github.sha }}
+          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+          git diff-tree --diff-filter=AM --no-commit-id --name-only -r ${{ github.sha }}
 
       - name: Install & build dependencies
         run: |
