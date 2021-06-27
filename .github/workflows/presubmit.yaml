@@ -49,7 +49,6 @@ jobs:
 
       - name: Check files containing lines with trailing spaces or tabs
         uses: marcopaganini/check-trailing-spaces@v1
-          ./ci/trailing-spaces-check.sh
 
       - name: Check Python code
         run: |
