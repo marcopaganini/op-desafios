@@ -2,7 +2,7 @@
 
 Este repositório contém as soluções para os desafios em http://osprogramadores.com/desafios.
 
-# Como contribuir 
+# Como contribuir
 
 1. Faça um fork deste repositório clicando no botão `Fork` no canto superior da tela.
 1. Faça um clone do repositório para a sua estação de trabalho:
