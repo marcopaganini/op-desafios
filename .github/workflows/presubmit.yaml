@@ -52,7 +52,7 @@ jobs:
           ./ci/utfcheck.sh
 
       - name: Check files containing lines with trailing spaces or tabs
-        uses: marcopaganini/check-trailing-spaces@v1.0.2
+        uses: marcopaganini/check-trailing-spaces@main
 
       - name: Check Python code
         run: |
