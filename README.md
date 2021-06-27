@@ -17,7 +17,7 @@ Este repositório contém as soluções para os desafios em http://osprogramador
    $ git remote add upstream https://github.com/OsProgramadores/op-desafios
    ```
 
-1. Uma vez feito o fork, crie um branch de trabalho (por exemplo, "dev") 
+1. Uma vez feito o fork, crie um branch de trabalho (por exemplo, "dev")
 
    ```
    $ git checkout -b dev
@@ -27,7 +27,7 @@ Este repositório contém as soluções para os desafios em http://osprogramador
 
    ```
    $ git push origin dev
-   ```	
+   ```
 
 1. O branch usado no "git checkout" tem que casar com o branch usado no "git push".
 
