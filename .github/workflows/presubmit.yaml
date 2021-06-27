@@ -1,5 +1,9 @@
 name: Presubmit tests
 on: [pull_request]
+
+env:
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
