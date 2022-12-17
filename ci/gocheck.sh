@@ -63,18 +63,20 @@ for dir in $go_dirs; do
   export TESTDIR="${GOPATH}/src/test"
   clean_gopath "${GOPATH}"
 
-  pushd "${dir}" || exit 1
+  pushd "${dir}" >/dev/null 2>&1 || exit 1
   cp -ar . "${TESTDIR}"
-  popd || exit 1
+  go mod init || true
+  go mod tidy || true
+  popd >/dev/null 2>&1 || exit 1
 
   # Fetch dependencies.
-  pushd "${TESTDIR}" || exit 1
+  pushd "${TESTDIR}" >/dev/null 2>&1 || exit 1
 
   for test in golangci_lint go_fmt; do
     echo -e "\n*** Running test $test"
     $test && echo "No problems found" || err=1
   done
-  popd || exit 1
+  popd >/dev/null 2>&1 || exit 1
 done
 
 # Restore FDs and close FDs 6/7.
