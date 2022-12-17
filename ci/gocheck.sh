@@ -2,8 +2,8 @@
 # Test code formatting compliance (Go)
 
 # Run golangci_lint on all files in the current directory.
-function golangci__lint() {
-  golangci-lint run -set_exit_status 2>&1
+function golangci_lint() {
+  golangci-lint run 2>&1
 }
 
 # Run go_fmt in all go files in current dir. Report diffs.
