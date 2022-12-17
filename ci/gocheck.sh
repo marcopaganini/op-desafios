@@ -69,7 +69,6 @@ for dir in $go_dirs; do
 
   # Fetch dependencies.
   pushd "${TESTDIR}" || exit 1
-  go get -t ./...
 
   for test in golangci_lint go_fmt; do
     echo -e "\n*** Running test $test"
