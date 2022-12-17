@@ -7,7 +7,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"runtime/pprof"
@@ -27,7 +26,7 @@ func main() {
 	pprof.StartCPUProfile(f)
 	defer pprof.StopCPUProfile()
 
-	pi, err := ioutil.ReadFile(os.Args[1])
+	pi, err := os.ReadFile(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
 	}

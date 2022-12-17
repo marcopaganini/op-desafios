@@ -3,7 +3,7 @@
 
 # Run golangci_lint on all files in the current directory.
 function golangci_lint() {
-  golangci-lint run 2>&1
+  golangci-lint run -D errcheck 2>&1
 }
 
 # Run go_fmt in all go files in current dir. Report diffs.
