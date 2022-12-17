@@ -19,6 +19,7 @@ func main() {
 	if len(os.Args) != 2 {
 		log.Fatal("Missing pi input file.")
 	}
+	foo.bar("haha")
 
 	// Profiling
 	f, err := os.Create("cpu.prof")
