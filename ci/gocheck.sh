@@ -65,7 +65,7 @@ for dir in $go_dirs; do
 
   pushd "${dir}" >/dev/null 2>&1 || exit 1
   cp -ar . "${TESTDIR}"
-  go mod init test || true
+  go mod init main || true
   go mod tidy || true
   popd >/dev/null 2>&1 || exit 1
 
